@@ -11,8 +11,7 @@ class CoronaAPI {
 
 	public function getCoronaInfo(string $data = "cases") :string {
         $site = json_decode(file_get_contents("https://raw.githubusercontent.com/ozanerturk/covid19-turkey-api/master/dataset/timeline.json", true), true);
-        $sonuc = array_key_exists(date("d/m/Y"), $site) ? $site[date("d/m/Y")][$data] : $site[date("d/m/Y", strtotime("yesterday"))][$data];
-        return number_format(intval($sonuc), 0, ".",".");
+        return number_format(intval(array_key_exists(date("d/m/Y"), $site) ? $site[date("d/m/Y")][$data] : $site[date("d/m/Y", strtotime("yesterday"))][$data]), 0, ".",".");
     }
 }
 new CoronaAPI();
