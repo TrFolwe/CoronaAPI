@@ -1,2 +1,2 @@
 # CoronaInfoAPI
-This corona info api php
+This corona api php
