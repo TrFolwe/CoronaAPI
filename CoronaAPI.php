@@ -3,7 +3,7 @@
 class CoronaAPI {
 	
 	public function __construct() {
-		echo $this->returnToCoronaInfo("tests","07/06/2022"); //Number of tests available date is '07/06/2022'
+		echo $this->returnToCoronaInfo("tests","07/06/2022"); //Number of tests available '07/06/2022'
 		echo $this->returnToCoronaInfo("cases"); //Number of current cases
 		echo $this->returnToCoronaInfo("deaths"); //Current number of deaths
 		echo $this->returnToCoronaInfo("recovered"); //Number of recoveries available
