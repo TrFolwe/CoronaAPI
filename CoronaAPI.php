@@ -3,10 +3,10 @@
 class CoronaAPI {
 	
 	public function __construct() {
-		echo $this->returnToCoronaInfo("tests","07/06/2022"); //Number of tests available '07/06/2022'
-		echo $this->returnToCoronaInfo("cases"); //Number of current cases
-		echo $this->returnToCoronaInfo("deaths"); //Current number of deaths
-		echo $this->returnToCoronaInfo("recovered"); //Number of recoveries available
+		echo $this->getCoronaInfo("tests","07/06/2022"); //Number of tests available '07/06/2022'
+		echo $this->getCoronaInfo("cases"); //Number of current cases
+		echo $this->getCoronaInfo("deaths"); //Current number of deaths
+		echo $this->getCoronaInfo("recovered"); //Number of recoveries available
 	}
 
 	public function getCoronaInfo(string $data = "cases", ?string $date = null) :string {
